@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.parent{
+    width: 600px;
+    background-color: #eee;
+    margin: 40px auto;
+    padding: 20px;
+    position: relative;
+}
+.parent input{
+    width: 100%;
+    border: none;
+    padding: 10px;
+}
+.parent input:focus{
+    outline: none;
+}
+.parent input::placeholder{
+    transition: 0.5s;
+}
+.parent input:focus::placeholder{
+    opacity: 0;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.buttons span{
+    background-color: #009688;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buttons span:hover{
+    background-color: #017a6e;
+}
+.result{
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed #a5a5a5;
+}
+
+.result > span{
+    display: inline-block;
+    background-color: #a8db03;
+}
+.result > span.error{
+    color: red;
+    font-weight: bold;
+}
+.result span.vibr{
+    animation: vibr 1s linear;
+}
+
+.result span span{
+    color: #017a6e;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.result span.show{
+    display: block;
+    background-color: white;
+}
+.developer{
+    margin-top: 30px;
+    /* color: #00BCD4; */
+
+    border: 1px dashed #9d9d9d ;
+    padding: 7px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    left: 0px;
+}
+.developer span:nth-child(1){
+    color: #009688;
+    font-weight: bold;
+    font-size: 16px;
+}
+.developer span:nth-child(2){
+    color: #e91e63;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 5px;
+}
+@keyframes vibr{
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(10px);
+    }
+    20%{
+        transform: translateX(-10px);
+    }
+    30%{
+        transform: translateX(10px);
+    }
+    40%{
+        transform: translateX(-10px);
+    }
+    50%{    
+        transform: translateX(10px);
+    }
+    60%{
+        transform: translateX(-10px);
+    }
+    70%{
+        transform: translateX(10px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    90%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
